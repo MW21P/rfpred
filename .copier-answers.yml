@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 66fd52c
+_src_path: gh:schwallergroup/copier-liac-minimal
+author_email: milena.wiegand@epfl.ch
+author_name: Milena Wiegand
+github_org: MW21P
+package_name: rfpred
+project_name: rfpred
+short_description: Package that predicts the Rf values for silica thin-layer-chromatographies
+    (TLCs)
