@@ -9,7 +9,12 @@ requires-python = ">=3.10"
 license = {file = "LICENSE"}
 description = "Package that predicts the Rf values for silica thin-layer-chromatographies (TLCs)"
 dependencies = [
-    # "rdkit",
+    "lightgbm>=3.2.1",
+    "numpy>=1.20.0",
+    "rdkit",
+    "streamlit>=0.82.0",
+    "streamlit_ketcher",
+    "matplotlib>=3.4.2"
 ]
 authors = [
     {name = "Milena Wiegand", email = "milena.wiegand@epfl.ch"}
