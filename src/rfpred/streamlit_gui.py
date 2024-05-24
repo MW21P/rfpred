@@ -2,8 +2,8 @@ import streamlit as st
 from streamlit_ketcher import st_ketcher
 import matplotlib.pyplot as plt
 
-from models import InputProcessing
-from models import LightGBM_model
+from rfpred.models import InputProcessing
+from rfpred.models import LightGBM_model
 
 input_processor = InputProcessing()
 model = LightGBM_model()
@@ -12,22 +12,7 @@ DEFAULT_MOL = (
     r"C"
 )
 
-solvent_options = {
-    'DCM': 'ClCCl',
-    'MeOH': 'CO',
-    'MeCN': 'CC#N',
-    'Toluene': 'Cc1ccccc1',
-    'Hexane': 'CCCCCC',
-    'Chloroform': 'ClC(Cl)Cl',
-    'Acetone': 'CC(=O)C',
-    'EtOH': 'CCO',
-    'diethyl ether': 'CCOCC',
-    'heptane': 'CCCCCCC',
-    'petroleum ether (2-methylpentane)': 'CCCC(C)C',
-    'triethylamine': 'CCN(CC)CC',
-    'EtOAc': 'O=C(OCC)C',
-    'THF': 'C1CCOC1'
-}
+
 solvents = ['DCM', 'MeOH', 'MeCN', 'Toluene', 'Hexane', 'Chloroform', 'Acetone', 'EtOH', 'diethyl ether', 'heptane', 'petroleum ether (2-methylpentane)', 'triethylamine', 'EtOAc', 'THF']
 
 
@@ -66,7 +51,7 @@ if submit_form:
                                                 solvent_A=select_box_A,
                                                 solvent_B=select_box_B,
                                                 percent_A=select_proportion)
-            #arr = model_converter.convert_gui_input_to_nparray(str(smile_code),str(solvent_options[select_box_A]),str(solvent_options[select_box_B]),select_proportion,100-select_proportion)
+            
             rf_value = model.predict(arr)
             
             

@@ -1,5 +1,5 @@
 import os
-import models
+import rfpred.models
 
 class App:
     """A class to run a graphical interface."""
