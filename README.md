@@ -3,7 +3,7 @@
 ![Coverage Status](assets/coverage-badge.svg)
 
 <h1 align="center">
-<i><b>rfpred</b></i>
+<i><b>rfpred 🧪 </b></i>
 </h1>
 
 <br>
