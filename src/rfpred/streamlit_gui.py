@@ -16,13 +16,13 @@ DEFAULT_MOL = (
 solvents = ['DCM', 'MeOH', 'MeCN', 'Toluene', 'Hexane', 'Chloroform', 'Acetone', 'EtOH', 'diethyl ether', 'heptane', 'petroleum ether (2-methylpentane)', 'triethylamine', 'EtOAc', 'THF']
 
 
-st.header('TLC Prediction', divider='rainbow')
+st.header('Rf Prediction for Silica TLC', divider='rainbow')
 
 with st.container(border=True):
     #streamlit_ketcher usage for crafting molecules
     molecule = st.text_input("Molecule", DEFAULT_MOL)
     smile_code = st_ketcher(molecule)
-    st.markdown(f"current Smile code: ``{smile_code}``")
+    st.markdown(f"current SMILES: ``{smile_code}``")
 
     with st.form("ped_form",border=False):
         st.write("choose solvents")
@@ -32,14 +32,14 @@ with st.container(border=True):
         select_box_B = st.selectbox('Solvent B', list(solvents))
 
         #slider
-        select_proportion= st.slider('Pick a proportion A to B', 0, 100,50)
+        select_proportion= st.slider('Pick the percent of A', 0, 100,50)
 
         #submit button for form
         submit_form = st.form_submit_button('get answer')
 
 if submit_form:
     print("Input  -------------------------------------------------------")
-    print("selected Molecule smile: " + smile_code)
+    print("selected Molecule SMILES: " + smile_code)
     print("selected Solvent A: " + str(select_box_A))
     print("selected Solvent B: " + str(select_box_B))
     print(f"proportions: Solvent A {select_proportion}% to Solvent B {100-select_proportion}%")
