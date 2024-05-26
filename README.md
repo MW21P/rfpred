@@ -3,26 +3,24 @@
 ![Coverage Status](assets/coverage-badge.svg)
 
 <h1 align="center">
-rfpred
+<i><b>rfpred</b></i>
 </h1>
 
 <br>
 
 
-Package that predicts the Rf values for silica thin-layer-chromatographies (TLCs)
+🔍 Package that predicts the Rf values for silica thin-layer-chromatographies (TLCs) in synthesis labs based on the chemical compound and the solvent system.
 
 ## 🔥 Usage
 
+After installing, you should create a new file and activate the environment where you installed ***rfpred***. This then allows you to use our prediction mode on a local host by copying this code into your new file:
+
 ```python
-from mypackage import main_func
+from rfpred import App
 
 # One line to rule them all
-result = main_func(data)
+rfpred.App.run()
 ```
-
-This usage example shows how to quickly leverage the package's main functionality with just one line of code (or a few lines of code). 
-After importing the `main_func` (to be renamed by you), you simply pass in your `data` and get the `result` (this is just an example, your package might have other inputs and outputs). 
-Short and sweet, but the real power lies in the detailed documentation.
 
 ## 👩‍💻 Installation
 
@@ -31,17 +29,12 @@ Create a new environment, you may also give the environment a different name.
 ```
 conda create -n rfpred python=3.10 
 ```
-
+Activate the environment and simply pip install the package by copying this into your command line.
 ```
 conda activate rfpred
-(conda_env) $ pip install .
+(rfpred) $ pip install "git+https://github.com/MW21P/rfpred.git" -U
 ```
-
-If you need jupyter lab, install it 
-
-```
-(rfpred) $ pip install jupyterlab
-```
+Then create a new file and proceed how described in the Usage section.
 
 
 ## 🛠️ Development installation
@@ -75,5 +68,10 @@ To install the package, run
 (conda_env) $ tox
 ```
 
+### 📖 Authors
+Milena Wiegand: https://github.com/MW21P
 
+Matthias Galka: https://github.com/MatGalk
+
+This project was carried out as part of EPFL's ***super cool*** "Practical programming in Chemistry" course.
 
