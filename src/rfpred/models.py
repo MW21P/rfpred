@@ -92,12 +92,26 @@ class InputProcessing:
         Returns:
             np.array: A numpy array of the solvent features.
         """
-        percent_B = 100 - percent_A
-        solvent_feature = np.zeros(len(solvents))
-        if solvent_A in solvents:
+        # ensure that solvents are in implemented solvents list
+        if solvent_A not in solvents or solvent_B not in solvents:
+            raise ValueError("Both solvents must be in the solvents list")
+
+        # in the case somebody has the idea to put solvent_A = DCM, solvent_B = DCM with 50/50, ensure the code does not crash
+        if solvent_A == solvent_B:
+            percent_A = 100
+            percent_B = 0
+            solvent_feature = np.zeros(len(solvents))
             solvent_A_index = solvents.index(solvent_A)
             solvent_feature[solvent_A_index] = percent_A
-        if solvent_B in solvents:
+        else:
+            percent_B = 100 - percent_A
+            solvent_feature = np.zeros(len(solvents))
+            
+            # insert percentage of A into np array
+            solvent_A_index = solvents.index(solvent_A)
+            solvent_feature[solvent_A_index] = percent_A
+
+            # insert percentage of B into np array
             solvent_B_index = solvents.index(solvent_B)
             solvent_feature[solvent_B_index] = percent_B
         return solvent_feature
