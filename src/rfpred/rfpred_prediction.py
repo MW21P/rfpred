@@ -18,8 +18,8 @@ class Prediction:
     """A class to get a prediction."""
     
     def __init__(self):
-        self.model = models.LightGBM_model()
-        self.input_processor = models.InputProcessing()
+        self.model = rfpred.models.LightGBM_model()
+        self.input_processor = rfpred.models.InputProcessing()
         self.solvents = ['DCM', 'MeOH', 'MeCN', 'Toluene', 'Hexane', 'Chloroform', 'Acetone', 'EtOH', 'diethyl ether', 'heptane', 'petroleum ether (2-methylpentane)', 'triethylamine', 'EtOAc', 'THF'] 
     
     def predict(self,compound_smile, solvent_a, solvent_b, percent_solvent_a):
