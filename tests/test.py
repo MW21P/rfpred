@@ -4,4 +4,4 @@ from rfpred.rfpred_prediction import Prediction
 import numpy as np
 
 def test_dummy():
-    pass
+    assert True
