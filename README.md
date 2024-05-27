@@ -38,31 +38,6 @@ Then simply pip install the package by copying this into your command line.
 ```
 Then create a new file and proceed how described in the Usage section.
 
-
-## 🛠️ Development installation
-
-Initialize Git (only for the first time). 
-
-Note: You should have create an empty repository on `https://github.com:MW21P/rfpred`.
-
-```
-git init
-git add * 
-git add .*
-git commit -m "Initial commit" 
-git branch -M main
-git remote add origin git@github.com:MW21P/rfpred.git 
-git push -u origin main
-```
-
-Then add and commit changes as usual. 
-
-To install the package, run
-
-```
-(rfpred) $ pip install -e ".[test,doc]"
-```
-
 ### Run tests and coverage
 
 ```
