@@ -16,7 +16,7 @@
 After installing, you should create a new file and activate the environment where you installed ***rfpred***. This then allows you to use our prediction mode on a local host by copying this code into your new file:
 
 ```python
-from rfpred import App
+import rfpred
 
 # One line to rule them all
 rfpred.App.run()
@@ -24,15 +24,17 @@ rfpred.App.run()
 
 ## 👩‍💻 Installation
 
-Create a new environment, you may also give the environment a different name. 
+Create a new environment, you may also give the environment a different name and activate this new environment.
 
 ```
-conda create -n rfpred python=3.10 
+conda create -n rfpred python=3.10
 ```
-Activate the environment and simply pip install the package by copying this into your command line.
 ```
 conda activate rfpred
-(rfpred) $ pip install "git+https://github.com/MW21P/rfpred.git" -U
+```
+Then simply pip install the package by copying this into your command line.
+```
+(rfpred) $ pip install "git+https://github.com/MW21P/rfpred.git"
 ```
 Then create a new file and proceed how described in the Usage section.
 
