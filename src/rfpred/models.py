@@ -56,8 +56,8 @@ class LightGBM_model:
         """
         if self.model != None:
             result = self.model.predict(input)
-            if result != None:
-                return result
+            if len(result) > 0:
+                return round(float(result[0]), 2)
         return None
         
 
