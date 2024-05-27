@@ -58,7 +58,8 @@ Then create a new file and proceed how described in the Usage section.
 ## ⚡Using the Streamlit Web Application
 
 This is a short User's manual to get familiar with the Web Interface of the prediction mode.
-![Web Application](assets/explanation_rfpred.png)
+
+<img src="assets/explanation_rfpred.png" alt="Alt text" width="500" />
 
 ## Run tests and coverage
 
