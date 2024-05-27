@@ -32,7 +32,7 @@ with st.container(border=True):
         select_box_B = st.selectbox('Solvent B', list(solvents))
 
         #slider
-        select_proportion= st.slider('Pick the percent of A', 0, 100,50)
+        select_proportion= st.slider('Pick the percentage of A', 0, 100,50)
 
         #submit button for form
         submit_form = st.form_submit_button('get answer')
