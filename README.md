@@ -55,6 +55,11 @@ Then simply pip install the package by copying this into your command line.
 ```
 Then create a new file and proceed how described in the Usage section.
 
+## ⚡Using the Streamlit Web Application
+
+This is a short User's manual to get familiar with the Web Interface of the prediction mode.
+![Web Application](assets/explanation_rfpred.png)
+
 ## Run tests and coverage
 
 ```
