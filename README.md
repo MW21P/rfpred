@@ -13,7 +13,7 @@
 
 ## 🔥 Usage
 
-After installing, you should create a new file and activate the environment where you installed ***rfpred***. This then allows you to use our prediction mode on a local host by copying this code into your new file:
+After installing, you should create a new file and activate the environment where you installed ***rfpred***. The function below will start a streamlit web app as a local host in your browser with the prediction interface.
 
 ```python
 import rfpred
@@ -21,6 +21,25 @@ import rfpred
 # One line to rule them all
 rfpred.App.run()
 ```
+
+If you want to run the prediction without the interface, use the `rfpred.Prediction` function.
+
+```python
+from rfpred import Prediction
+
+pred = Prediction()
+rf_value = pred.predict(compound_smile, solvent_a, solvent_b, percent_solvent_a)
+```
+To get to know, which solvents you can choose from for the prediction, run
+
+```python
+from rfpred import Prediction
+
+solvents = pred.solvents()
+print(solvents)
+
+```
+after initiation of your `Prediction` object.
 
 ## 👩‍💻 Installation
 
