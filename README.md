@@ -33,8 +33,6 @@ rf_value = pred.predict(compound_smile, solvent_a, solvent_b, percent_solvent_a)
 To get to know, which solvents you can choose from for the prediction, run
 
 ```python
-from rfpred import Prediction
-
 solvents = pred.solvents()
 print(solvents)
 
