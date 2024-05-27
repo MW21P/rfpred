@@ -55,14 +55,14 @@ Then simply pip install the package by copying this into your command line.
 ```
 Then create a new file and proceed how described in the Usage section.
 
-### Run tests and coverage
+## Run tests and coverage
 
 ```
 (conda_env) $ pip install tox
 (conda_env) $ tox
 ```
 
-### 📖 Authors
+## 📖 Authors
 Milena Wiegand: https://github.com/MW21P
 
 Matthias Galka: https://github.com/MGalka66
