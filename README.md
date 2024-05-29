@@ -40,7 +40,6 @@ print(solvents)
 after initiation of your `Prediction` object.
 
 ## 👩‍💻 Installation
-❗ This is currently incompatible with iMac M1 Chips due to a conflict with the lightbr package. On Windows it works perfectly fine. ❗
 
 Create a new environment, you may also give the environment a different name and activate this new environment.
 
@@ -50,11 +49,27 @@ conda create -n rfpred python=3.10
 ```
 conda activate rfpred
 ```
+
 Then simply pip install the package by copying this into your command line.
 ```
 (rfpred) $ pip install "git+https://github.com/MW21P/rfpred.git"
 ```
 Then create a new file and proceed how described in the Usage section.
+
+❗ The installation is currently incompatible with iMac M1/M2 Chips due to a conflict with the LightGBM package. On Windows it works perfectly fine. ❗
+Possible solution: After creating and activating the enviroment install Homebrew:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Add Homebrew to your path. You will finde a describtion for that in your terminal after installing Hombrew.
+Now you can install libomp with Homebrew.
+```
+brew install libomp
+```
+Finally LightGBM will be installable:
+```
+pip install lightgbm
+```
 
 ## ⚡Using the Streamlit Web Application
 
