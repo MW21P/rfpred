@@ -40,6 +40,7 @@ print(solvents)
 after initiation of your `Prediction` object.
 
 ## 👩‍💻 Installation
+❗ This is currently incompatible with iMac M1 Chips due to a conflict with the lightbr package. On Windows it works perfectly fine. ❗
 
 Create a new environment, you may also give the environment a different name and activate this new environment.
 
