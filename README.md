@@ -89,5 +89,5 @@ Milena Wiegand: https://github.com/MW21P
 
 Matthias Galka: https://github.com/MGalka66
 
-This project was carried out as part of EPFL's ***super cool*** "Practical programming in Chemistry" course.
+This project was carried out as part of EPFL's "Practical programming in Chemistry" course.
 
